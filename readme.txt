@@ -70,6 +70,9 @@ To make everything pretty, add a rdp-gcs.custom.css file to your theme's folder.
 
 == Changelog ==
 
+= 0.1.1 =
+* REFACTOR: added downward pointing triangle to CSE search scope button 
+
 = 0.1.0 = 
 * Initial RC
 

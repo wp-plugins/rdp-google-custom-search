@@ -274,7 +274,7 @@ EOD;
         $sHTML .= '<table><tr>';
 
         $sHTML .= '<td class="rdp-gcs-search-scope-button">';
-        $sHTML .= '<div id="rdp-gcs-search-scope-button-' . $nGUID . '" class="rdp-gcs-search-scope-button" data-guid="' . $nGUID . '" data-form-id="frmRDPGCSearch-' . $nGUID . '" >'. $sSelectedMenuTitle . '</div>';
+        $sHTML .= '<div id="rdp-gcs-search-scope-button-' . $nGUID . '" class="rdp-gcs-search-scope-button" data-guid="' . $nGUID . '" data-form-id="frmRDPGCSearch-' . $nGUID . '" >'. $sSelectedMenuTitle . ' &#9662;</div>';
         $sHTML .= '</td>';
 
         $sHTML .= '<td class="rdp-gcs-search-box">';
