@@ -3,7 +3,7 @@ Contributors: rpayne7264
 Tags: google search, google custom search,google custom search engine, search results, multiple site search
 Requires at least: 3.4
 Tested up to: 4.1
-Stable tag: 0.1.0
+Stable tag: 0.1.1
 
 RDP Google Custom Search lets you use Google's Custom Search Engine (CSE) API to add targeted search capability to your site.
 
@@ -69,6 +69,9 @@ To make everything pretty, add a rdp-gcs.custom.css file to your theme's folder.
 
 
 == Changelog ==
+
+= 0.1.1 =
+* REFACTOR: added downward pointing triangle to CSE search scope button 
 
 = 0.1.0 = 
 * Initial RC
