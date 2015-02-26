@@ -121,7 +121,7 @@ To make everything pretty, add a rdp-gcs.custom.css file to your theme's folder.
 
 = rdp_gcs_render_search_results =
 * Param 1: JSON object containing Google API search results or NULL if an error occurred during the API call
-* Param 2: string containing the last error message set during the search request or empty string is no error occurred
+* Param 2: string containing the last error message set during the search request or empty string if no error occurred
 * This filter is required for hooking into a function that will render the search results. For a custom rendering function, be sure to remove this filter during the rdp_gcs_render_search_results_applied hook, and then re-set this filter to use your custom rendering function
 
 = rdp_gcs_after_search_results =
