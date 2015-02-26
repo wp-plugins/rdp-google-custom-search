@@ -4,7 +4,7 @@
 Plugin Name: RDP Google Custom Search
 Plugin URI: http://robert-d-payne.com/
 Description: Add Google custom search engines to a page/post using a shortcode
-Version: 0.1.0
+Version: 0.1.2
 Author: Robert D Payne
 Author URI: http://robert-d-payne.com/
 License: GPLv2 or later
@@ -24,7 +24,7 @@ define('RDP_GCS_CSE_TABLE', $wpdb->prefix . 'gcsefeeds');
 
 class RDP_GCS_PLUGIN {
     public static $plugin_slug = 'rdp-google-custom-search';    
-    public static $version = '0.1.0';
+    public static $version = '0.1.2';
     protected $loader;
     
     public function __construct() {

@@ -23,7 +23,7 @@ class RDP_GCS {
         if(!is_numeric($this->_selectedID)) $this->_selectedID = 0;
         if($this->_selectedID < 0)$this->_selectedID = 0;         
         if(isset($_POST['txtRDPGCSMenuTitle']))$this->_selectedMenuTitle = $_POST['txtRDPGCSMenuTitle'];
-        if(isset($_POST['txtRDPGCSSearchTerm']))$this->_searchTerm = $_POST['txtRDPGCSSearchTerm'];
+        if(isset($_POST['txtRDPGCSSearchTerm']))$this->_searchTerm = stripslashes_deep($_POST['txtRDPGCSSearchTerm']);
 
         if(!empty($this->_searchTerm)){
             $currentPage = (isset($_POST['txtRDPGCSPage']))? $_POST['txtRDPGCSPage'] : 1;
@@ -205,7 +205,6 @@ class RDP_GCS {
 
     
     public function shortcode($atts){
-        if(is_404())return '';        
         $oAtts = shortcode_atts(array(
             'id' => '',
             'default' =>  ''
@@ -274,12 +273,12 @@ EOD;
         $sHTML .= '<table><tr>';
 
         $sHTML .= '<td class="rdp-gcs-search-scope-button">';
-        $sHTML .= '<div id="rdp-gcs-search-scope-button-' . $nGUID . '" class="rdp-gcs-search-scope-button" data-guid="' . $nGUID . '" data-form-id="frmRDPGCSearch-' . $nGUID . '" >'. $sSelectedMenuTitle . '</div>';
+        $sHTML .= '<div id="rdp-gcs-search-scope-button-' . $nGUID . '" class="rdp-gcs-search-scope-button" data-guid="' . $nGUID . '" data-form-id="frmRDPGCSearch-' . $nGUID . '" >'. $sSelectedMenuTitle . ' &#9662;</div>';
         $sHTML .= '</td>';
 
         $sHTML .= '<td class="rdp-gcs-search-box">';
         $sHTML .= '<div class="rdp-gcs-search-box-container">';
-        $sHTML .= '<input name="txtRDPGCSSearchTerm" class="rdp-gcs-search-term" data-guid="' . $nGUID . '" type="text" value="'. $this->_searchTerm . '"/>';
+        $sHTML .= '<input name="txtRDPGCSSearchTerm" class="rdp-gcs-search-term" data-guid="' . $nGUID . '" type="text" value="'. esc_attr($this->_searchTerm) . '"/>';
         $sHTML .= '<input name="txtRDPGCSCSEID" id="txtRDPGCSCSEID" type="hidden" value="'. $nSelectedID . '"/>';
         $sHTML .= '<input name="txtRDPGCSMenuTitle" id="txtRDPGCSMenuTitle" type="hidden" value="'. $sSelectedMenuTitle . '"/>'; 
         $sHTML .= '<input name="txtRDPGCSPage" id="txtRDPGCSPage" type="hidden"  value="" />';

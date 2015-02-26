@@ -68,7 +68,7 @@ function rdp_gcs_global_onReady(){
             txtSearchTerm.val('').removeClass('placeholder').trigger('blur');
         }
         
-        $j('#rdp-gcs-search-scope-button-'+guid).text($j(this).text());
+        $j('#rdp-gcs-search-scope-button-'+guid).html($j(this).text() + " &#9662;");
         $j('#rdp-gcs-sub-wrapper-'+guid).addClass('hidden').removeClass('visible');
         if(!txtSearchTerm.hasClass('placeholder') && $j(this).data('id') == 0)handle_search_and_highlight(txtSearchTerm.val());
     });
