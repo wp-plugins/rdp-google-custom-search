@@ -17,19 +17,6 @@ class RDP_GCS_ADMIN {
                     FALSE
             );
     }//stylesEnqueue
-
-    public function scriptsEnqueue() {
-        wp_enqueue_script('common');
-        wp_enqueue_script('wp-lists');
-        wp_enqueue_script('postbox');
-        wp_enqueue_script( 'jquery' );        
-        wp_enqueue_script(
-                'rdp-gcs-admin',
-                plugin_dir_url( __FILE__ ) . 'js/rdp-gcs.admin.js', 
-                array('jquery'), 
-                $this->version, 
-                true);
-    }//scriptsEnqueue 
     
     /*------------------------------------------------------------------------------
     Add admin menu
