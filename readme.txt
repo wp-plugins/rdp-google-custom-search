@@ -71,7 +71,7 @@ To make everything pretty, add a rdp-gcs.custom.css file to your theme's folder.
 == Changelog ==
 
 = 0.1.3 =
-* REFACTOR: removed unused admin-side script file
+* REFACTOR: removed unused admin-side script file reference
 
 = 0.1.2 =
 * REFACTOR: fixed downward pointing triangle changing to entity values after picklist switch
