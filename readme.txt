@@ -2,7 +2,7 @@
 Contributors: rpayne7264
 Tags: google search, google custom search,google custom search engine, search results, multiple site search
 Requires at least: 3.4
-Tested up to: 4.1
+Tested up to: 4.2
 Stable tag: 0.1.3
 
 RDP Google Custom Search lets you use Google's Custom Search Engine (CSE) API to add targeted search capability to your site.
